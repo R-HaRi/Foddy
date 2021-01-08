@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Delivery_offlinePage">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/dlvr_lottie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/dlvr_offlinetext1"
+        android:layout_centerInParent="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/offlineimg"
+        app:lottie_url="REPLACE_JSON_URL">
+
+    </com.airbnb.lottie.LottieAnimationView>
+
+    <TextView
+        android:id="@+id/dlvr_offlinetext1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="@string/offline_text1"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dlvr_offlinetext2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dlvr_offlinetext1"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="@string/offline_text2"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/dlvr_oflb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dlvr_offlinetext2"
+        android:layout_margin="40dp"
+        android:backgroundTint="@color/button_tint"
+        android:text="Go Online"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        android:padding="10dp"/>
+
+
+</RelativeLayout>

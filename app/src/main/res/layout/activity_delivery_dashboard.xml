@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Delivery_dashboard">
+
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/dlvr_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:checked="true"
+        android:text="Are you available ?"
+        android:textSize="16sp">
+
+    </androidx.appcompat.widget.SwitchCompat>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/dlvr_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dlvr_switch" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/dlvr_viewpg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/dlvr_bot_nav"
+        android:layout_below="@id/dlvr_tab" />
+
+    <FrameLayout
+        android:id="@+id/dlvr_framelyt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/dlvr_bot_nav"
+        android:layout_below="@id/dlvr_switch" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/dlvr_bot_nav"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/delivery_bottom_nav"
+        android:background="@color/bk_primary">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</RelativeLayout>
